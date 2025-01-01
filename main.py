@@ -128,15 +128,15 @@ def processColumnContours(column_contours, thresholded_image):
 
 # Load the image
 img = cv.imread("multifilled.png")
-imgGray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-imgBlur = cv.GaussianBlur(imgGray, (5, 5), 1)
-imgCanny = cv.Canny(imgBlur, 10, 50)
+# imgGray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+# imgBlur = cv.GaussianBlur(imgGray, (5, 5), 1)
+# imgCanny = cv.Canny(imgBlur, 10, 50)
 
 # Find contours
-contours, hierarchy = cv.findContours(imgCanny, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
+#contours, hierarchy = cv.findContours(imgCanny, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
 
 # Filter circular contours
-circleCons = circularContour(contours)
+#circleCons = circularContour(contours)
 
 # Get the width of the image to define the columns
 img_height, img_width = img.shape[:2]
